@@ -1,0 +1,10 @@
+/* src/Footer.css */
+.Footer {
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(192, 45, 26);
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
