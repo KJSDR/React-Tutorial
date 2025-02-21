@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
-import App from './App';
+import App from './components/App';
 import POPOSList from './POPOSList';
 import About from './About';
 import POPOSDetails from './POPOSDetails';
