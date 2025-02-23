@@ -2,7 +2,7 @@
   "name": "sfpopos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/KJSDR.github.io/React-Tutorial",
+  "homepage": "https://KJSDR.github.io/React-Tutorial",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
