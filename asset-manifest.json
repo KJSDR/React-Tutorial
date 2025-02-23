@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/KJSDR/React-Tutorial/static/css/main.430c840a.css",
-    "main.js": "/KJSDR/React-Tutorial/static/js/main.2aa3dd4d.js",
-    "static/js/453.be6cdab1.chunk.js": "/KJSDR/React-Tutorial/static/js/453.be6cdab1.chunk.js",
-    "index.html": "/KJSDR/React-Tutorial/index.html",
-    "main.430c840a.css.map": "/KJSDR/React-Tutorial/static/css/main.430c840a.css.map",
-    "main.2aa3dd4d.js.map": "/KJSDR/React-Tutorial/static/js/main.2aa3dd4d.js.map",
-    "453.be6cdab1.chunk.js.map": "/KJSDR/React-Tutorial/static/js/453.be6cdab1.chunk.js.map"
+    "main.css": "/KJSDR.github.io/React-Tutorial/static/css/main.430c840a.css",
+    "main.js": "/KJSDR.github.io/React-Tutorial/static/js/main.673288dc.js",
+    "static/js/453.be6cdab1.chunk.js": "/KJSDR.github.io/React-Tutorial/static/js/453.be6cdab1.chunk.js",
+    "index.html": "/KJSDR.github.io/React-Tutorial/index.html",
+    "main.430c840a.css.map": "/KJSDR.github.io/React-Tutorial/static/css/main.430c840a.css.map",
+    "main.673288dc.js.map": "/KJSDR.github.io/React-Tutorial/static/js/main.673288dc.js.map",
+    "453.be6cdab1.chunk.js.map": "/KJSDR.github.io/React-Tutorial/static/js/453.be6cdab1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.430c840a.css",
-    "static/js/main.2aa3dd4d.js"
+    "static/js/main.673288dc.js"
   ]
 }
