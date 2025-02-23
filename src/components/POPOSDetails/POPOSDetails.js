@@ -1,23 +1,23 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import data from '../sfpopos-data.json';
-
+import data from '../../sfpopos-data.json';
+import './POPOSDetails.css';
 
 function POPOSDetails() {
-  const { id } = useParams(); // Get the space ID from the URL
+  const { id } = useParams();
   const { images, title, desc, hours, features, geo } = data[id];
 
   return (
-    <div>
-      <div>
+    <div className="POPOSDetails">
+      <div className="POPOSDetails-image">
         <img src={`${process.env.PUBLIC_URL}/images/${images[0]}`} alt={title} />
       </div>
-      <div>
-        <h1>{title}</h1>
-        <p>{desc}</p>
-        <p>Hours: {hours}</p>
-        <p>Features: {features.join(', ')}</p>
-        <p>Location: {geo.lat}, {geo.lon}</p>
+      <div className="POPOSDetails-info">
+        <h1 className="POPOSDetails-title">{title}</h1>
+        <p className="POPOSDetails-desc">{desc}</p>
+        <p className="POPOSDetails-hours">Hours: {hours}</p>
+        <p className="POPOSDetails-features">Features: {features.join(', ')}</p>
+        <p className="POPOSDetails-geo">Coordinates: {geo.lat}, {geo.lon}</p>
       </div>
     </div>
   );
