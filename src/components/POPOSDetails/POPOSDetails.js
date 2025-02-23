@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import data from '../../sfpopos-data.js';
+import POPOSFeatureList from '../POPOSFeatures/POPOSFeatureList';
 import './POPOSDetails.css';
-
 
 function POPOSDetails() {
   const { id } = useParams();
@@ -17,7 +17,7 @@ function POPOSDetails() {
         <h1 className="POPOSDetails-title">{title}</h1>
         <p className="POPOSDetails-desc">{desc}</p>
         <p className="POPOSDetails-hours">Hours: {hours}</p>
-        <p className="POPOSDetails-features">Features: {features.join(', ')}</p>
+        <POPOSFeatureList features={features} />
         <p className="POPOSDetails-geo">Coordinates: {geo.lat}, {geo.lon}</p>
       </div>
     </div>
