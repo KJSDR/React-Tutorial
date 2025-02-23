@@ -1,11 +1,10 @@
 /* src/components/POPOSList/POPOSList.css */
 .POPOSList {
-  width: calc(100% - 80px);
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2em;
   max-width: 1200px;
+  margin: auto;
   padding: 2em;
 }
 
