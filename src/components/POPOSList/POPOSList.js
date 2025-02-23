@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
-import data from '../sfpopos-data.js'; // Changed from JSON to JS file
+import data from '../../sfpopos-data.js';
+
 
 function POPOSList() {
   const [query, setQuery] = useState('');

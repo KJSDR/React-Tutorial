@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 import App from './components/App';
-import POPOSList from './POPOSList';
-import About from './About';
-import POPOSDetails from './POPOSDetails';
+import POPOSList from './components/POPOSList/POPOSList';
+import About from './components/About/About';
+import POPOSDetails from './components/POPOSDetails/POPOSDetails';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
