@@ -1,7 +1,16 @@
+.POPOSList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1em;
+}
+
 .POPOSList form {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .POPOSList form input,
@@ -21,4 +30,32 @@
 .POPOSList form button {
   border-top-right-radius: 0.5em;
   border-bottom-right-radius: 0.5em;
+}
+
+/* Grid container for the spaces */
+.POPOSList-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2em;
+  margin-top: 2em;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1200px) {
+  .POPOSList-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .POPOSList-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .POPOSList-grid {
+    grid-template-columns: 1fr;
+  }
 }

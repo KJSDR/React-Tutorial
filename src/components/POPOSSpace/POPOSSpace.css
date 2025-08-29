@@ -3,12 +3,23 @@
   width: 100%;
   text-align: center;
   position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Make images flexible */
+.POPOSSpace:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Make images flexible and maintain aspect ratio */
 .POPOSSpace img {
   width: 100%;
-  height: auto;
+  height: 200px;
+  object-fit: cover;
+  display: block;
 }
 
 /* Style the title (moves to top-left of image) */
@@ -24,9 +35,12 @@
   top: 0;
   margin: 0;
   font-weight: lighter;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 1rem;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 0.5rem 1rem;
   text-align: left;
+  max-width: 70%;
+  line-height: 1.2;
 }
 
 /* Move address and hours to bottom-right of image */
@@ -35,10 +49,17 @@
   right: 0;
   bottom: 0;
   text-align: right;
+  max-width: 70%;
 }
 
 .POPOSSpace .POPOSSpace-info div {
-  display: inline-block;
+  display: block;
   padding: 0.25em 0.5em;
   background-color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9em;
+  margin-bottom: 1px;
+}
+
+.POPOSSpace .POPOSSpace-info div:last-child {
+  margin-bottom: 0;
 }

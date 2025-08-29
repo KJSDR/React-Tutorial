@@ -3,7 +3,6 @@ import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
 import data from '../../sfpopos-data.js';
 
-
 function POPOSList() {
   const [query, setQuery] = useState('');
 
@@ -34,7 +33,9 @@ function POPOSList() {
         />
         <button type="submit">Submit</button>
       </form>
-      {spaces}
+      <div className="POPOSList-grid">
+        {spaces}
+      </div>
     </div>
   );
 }
