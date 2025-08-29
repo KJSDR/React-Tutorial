@@ -1,32 +1,150 @@
 /* Title.css */
 .Title {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: rgb(192, 45, 26);
+  color: #fff;
+  margin-bottom: 2em;
+}
+
+.Title header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 2em;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.Title-left {
+  text-align: left;
+}
+
+.Title-left h1 {
+  margin: 0;
+  font-size: 2em;
+}
+
+.Title-Subtitle {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9em;
+  margin-top: 0.25em;
+}
+
+.Title-center {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+/* Styles for navigation links */
+.Title a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  color: rgba(255, 255, 255, 0.835);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.Title a:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.Title .nav-link-active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* Search form styles */
+.Title-right {
+  min-width: 280px;
+}
+
+.Title-search {
+  display: flex;
+  align-items: stretch;
+}
+
+.Title-search input,
+.Title-search button {
+  padding: 0.75em 1em;
+  margin: 0;
+  border: none;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.Title-search input {
+  flex: 1;
+  border-radius: 4px 0 0 4px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.Title-search input::placeholder {
+  color: #666;
+}
+
+.Title-search input:focus {
+  background-color: #fff;
+}
+
+.Title-search button {
+  border-radius: 0 4px 4px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.Title-search button:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 968px) {
+  .Title header {
+    flex-direction: column;
+    gap: 1em;
     padding: 1em;
-    margin-bottom: 2em;
-    background-color: rgb(18, 119, 0);
-    color: #fff;
+  }
+  
+  .Title-left {
     text-align: center;
   }
   
+  .Title-center {
+    order: 3;
+  }
+  
+  .Title-right {
+    order: 2;
+    min-width: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 640px) {
+  .Title-left h1 {
+    font-size: 1.5em;
+  }
+  
   .Title-Subtitle {
-    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.8em;
   }
   
-  /* Styles for navigation links */
+  .Title-center {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
   .Title a {
-    display: inline-block;
-    padding: 0.5em 1em;
-    color: rgba(255, 255, 255, 0.835);
-    font-weight: bold;
-    text-decoration: none;
+    padding: 0.4em 0.8em;
+    font-size: 0.9em;
   }
-  
-  .Title .nav-link-active {
-    color: #fff;
-    border-bottom: 2px solid;
-  }
-  
+}

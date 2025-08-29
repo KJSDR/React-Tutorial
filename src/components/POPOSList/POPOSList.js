@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useOutletContext } from 'react-router-dom';
 import POPOSSpace from '../POPOSSpace/POPOSSpace';
 import './POPOSList.css';
 import data from '../../sfpopos-data.js';
 
 function POPOSList() {
-  const [query, setQuery] = useState('');
-
+  const { searchQuery = '' } = useOutletContext();
+  const query = searchQuery;
   const spaces = data
     .filter(({ title, address }) => {
       const inTitle = title.toLowerCase().includes(query.toLowerCase());
@@ -25,14 +26,6 @@ function POPOSList() {
 
   return (
     <div className="POPOSList">
-      <form>
-        <input
-          value={query}
-          placeholder="Search"
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <button type="submit">Submit</button>
-      </form>
       <div className="POPOSList-grid">
         {spaces}
       </div>
