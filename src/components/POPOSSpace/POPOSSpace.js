@@ -5,14 +5,20 @@ import './POPOSSpace.css';
 function POPOSSpace({ id, name, image, address, hours }) {
   return (
     <div className="POPOSSpace">
-      <Link to={`/details/${id}`}>
-        <img src={`${process.env.PUBLIC_URL}/images/${image}`} alt={name} />
-      </Link>
-      <h1>
-        <Link className="POPOSSpace-title" to={`/details/${id}`}>
-          {name}
+      <div className="POPOSSpace-header">
+        <h1>
+          <Link className="POPOSSpace-title" to={`/details/${id}`}>
+            {name}
+          </Link>
+        </h1>
+      </div>
+      
+      <div className="POPOSSpace-image">
+        <Link to={`/details/${id}`}>
+          <img src={`${process.env.PUBLIC_URL}/images/${image}`} alt={name} />
         </Link>
-      </h1>
+      </div>
+
       <div className="POPOSSpace-info">
         <div>{address}</div>
         <div>{hours}</div>

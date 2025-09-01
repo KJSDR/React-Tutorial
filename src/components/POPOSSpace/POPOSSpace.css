@@ -1,12 +1,14 @@
-/* Ensure the root container is positioned properly */
+/* Card container */
 .POPOSSpace {
   width: 100%;
-  text-align: center;
-  position: relative;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 280px; /* Fixed height for consistent card sizes */
 }
 
 .POPOSSpace:hover {
@@ -14,52 +16,77 @@
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
-/* Make images flexible and maintain aspect ratio */
-.POPOSSpace img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
-
-/* Style the title (moves to top-left of image) */
-.POPOSSpace .POPOSSpace-title {
-  text-decoration: none;
-  color: #000;
+/* Header section - title at top-right */
+.POPOSSpace-header {
+  padding: 0.75rem 1rem 0.5rem 1rem;
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
 }
 
 .POPOSSpace h1 {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
   margin: 0;
-  font-weight: lighter;
-  font-size: 1.2em;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 0.5rem 1rem;
-  text-align: left;
-  max-width: 70%;
+  font-weight: 600;
+  font-size: 1.1em;
   line-height: 1.2;
+  text-align: right;
+  max-width: 100%;
 }
 
-/* Move address and hours to bottom-right of image */
-.POPOSSpace .POPOSSpace-info {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.POPOSSpace .POPOSSpace-title {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.POPOSSpace .POPOSSpace-title:hover {
+  color: rgb(192, 45, 26);
+}
+
+/* Image section - clean with no text overlay */
+.POPOSSpace-image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.POPOSSpace img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.POPOSSpace:hover img {
+  transform: scale(1.02);
+}
+
+/* Footer section - address/hours at bottom-right */
+.POPOSSpace-info {
+  padding: 0.5rem 1rem 0.75rem 1rem;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
   text-align: right;
-  max-width: 70%;
 }
 
 .POPOSSpace .POPOSSpace-info div {
-  display: block;
-  padding: 0.25em 0.5em;
-  background-color: rgba(255, 255, 255, 0.9);
-  font-size: 0.9em;
-  margin-bottom: 1px;
+  margin-bottom: 0.25rem;
+  font-size: 0.85em;
+  line-height: 1.3;
+  color: #666;
+}
+
+.POPOSSpace .POPOSSpace-info div:first-child {
+  font-weight: 500;
+  color: #555;
 }
 
 .POPOSSpace .POPOSSpace-info div:last-child {
   margin-bottom: 0;
+  font-style: italic;
+  color: #777;
 }
