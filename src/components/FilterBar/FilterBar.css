@@ -1,0 +1,129 @@
+.FilterBar {
+    width: 100%;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 2em;
+  }
+  
+  .FilterBar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+  }
+  
+  .FilterBar-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+    padding: 1em 0;
+  }
+  
+  .FilterBar-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+  
+  .FilterBar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    flex: 1;
+  }
+  
+  .FilterBar-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    padding: 0.5em 1em;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    background-color: #fff;
+    color: #666;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .FilterBar-button:hover {
+    border-color: rgb(192, 45, 26);
+    color: rgb(192, 45, 26);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(192, 45, 26, 0.2);
+  }
+  
+  .FilterBar-button.active {
+    background-color: rgb(192, 45, 26);
+    border-color: rgb(192, 45, 26);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(192, 45, 26, 0.3);
+  }
+  
+  .FilterBar-button.active:hover {
+    background-color: rgb(172, 35, 16);
+    border-color: rgb(172, 35, 16);
+  }
+  
+  .FilterBar-button-emoji {
+    font-size: 1.1em;
+  }
+  
+  .FilterBar-button-text {
+    font-size: 0.9em;
+  }
+  
+  .FilterBar-clear {
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 20px;
+    background-color: #6c757d;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+  
+  .FilterBar-clear:hover {
+    background-color: #5a6268;
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .FilterBar-content {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75em;
+    }
+  
+    .FilterBar-label {
+      text-align: center;
+    }
+  
+    .FilterBar-buttons {
+      justify-content: center;
+    }
+  
+    .FilterBar-clear {
+      align-self: center;
+      margin-top: 0.5em;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .FilterBar-button {
+      flex: 1;
+      justify-content: center;
+      min-width: calc(50% - 0.25em);
+    }
+    
+    .FilterBar-button-text {
+      font-size: 0.8em;
+    }
+  }

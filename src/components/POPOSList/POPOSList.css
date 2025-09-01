@@ -4,6 +4,27 @@
   padding: 0 1em;
 }
 
+/* Empty state styling */
+.POPOSList-empty {
+  text-align: center;
+  padding: 3em 2em;
+  color: #666;
+}
+
+.POPOSList-empty h3 {
+  color: #333;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.POPOSList-empty p {
+  margin-bottom: 0.75em;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Grid container for the spaces */
 .POPOSList-grid {
   display: grid;
