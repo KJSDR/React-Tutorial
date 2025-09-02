@@ -4,6 +4,7 @@ import './App.css';
 import Title from './Title/Title';
 import FilterBar from './FilterBar/FilterBar';
 import Footer from './Footer/Footer';
+import BackToTop from './BackToTop/BackToTop';
 
 function App() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -33,6 +34,7 @@ function App() {
       />
       <Outlet context={{ searchQuery, selectedFilters }} />   
       <Footer />   
+      <BackToTop />
     </div>
   );
 }
