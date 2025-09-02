@@ -1,30 +1,89 @@
 .POPOSDetails {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 960px;
-    margin: auto;
+  display: flex;
+  flex-direction: row-reverse;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  gap: 2rem;
+}
+
+.POPOSDetails .POPOSDetails-info {
+  flex: 1;
+  text-align: left;
+  min-width: 300px;
+}
+
+.POPOSDetails .POPOSDetails-title {
+  font-size: 2em;
+  margin: 0 0 1rem 0;
+  color: #333;
+}
+
+.POPOSDetails .POPOSDetails-image {
+  flex: 2;
+  min-width: 300px;
+}
+
+.POPOSDetails .POPOSDetails-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.POPOSDetails .POPOSDetails-hours {
+  font-size: 1.2em;
+  margin: 1rem 0;
+  color: #555;
+}
+
+.POPOSDetails .POPOSDetails-desc {
+  margin: 1rem 0;
+  line-height: 1.6;
+  color: #666;
+}
+
+.POPOSDetails .POPOSDetails-geo {
+  margin: 1rem 0;
+  font-size: 0.9em;
+  color: #777;
+}
+
+/* Mobile responsive design */
+@media (max-width: 968px) {
+  .POPOSDetails {
+    flex-direction: column;
+    padding: 0 1rem;
+    gap: 1.5rem;
   }
   
   .POPOSDetails .POPOSDetails-info {
-    flex: 1;
-    text-align: left;
-    padding: 0 1em;
-  }
-  
-  .POPOSDetails .POPOSDetails-title {
-    font-size: 2em;
-    margin: 0;
+    min-width: auto;
+    order: 2;
   }
   
   .POPOSDetails .POPOSDetails-image {
-    flex: 2;
+    min-width: auto;
+    order: 1;
   }
   
-  .POPOSDetails .POPOSDetails-image img {
-    width: 100%;
-  }
-  
-  .POPOSDetails .POPOSDetails-hours {
+  .POPOSDetails .POPOSDetails-title {
     font-size: 1.5em;
   }
   
+  .POPOSDetails .POPOSDetails-hours {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .POPOSDetails {
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+  
+  .POPOSDetails .POPOSDetails-title {
+    font-size: 1.3em;
+  }
+}
