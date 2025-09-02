@@ -32,7 +32,9 @@ function App() {
         selectedFilters={selectedFilters}
         onFilterChange={handleFilterChange}
       />
-      <Outlet context={{ searchQuery, selectedFilters }} />   
+      <main className="App-main">
+        <Outlet context={{ searchQuery, selectedFilters }} />   
+      </main>
       <Footer />   
       <BackToTop />
     </div>
