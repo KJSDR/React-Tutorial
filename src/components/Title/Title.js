@@ -21,6 +21,9 @@ function Title({ query, setQuery, onSearch }) {
         <div className="Title-center">
           <NavLink className={({ isActive }) => isActive ? "nav-link-active" : "nav-link"} to="/">List</NavLink>
           <NavLink className={({ isActive }) => isActive ? "nav-link-active" : "nav-link"} to="/about">About</NavLink>
+        </div>
+
+        <div className="Title-mobile-random">
           <RandomSpace />
         </div>
 
@@ -33,6 +36,9 @@ function Title({ query, setQuery, onSearch }) {
             />
             <button type="submit">Search</button>
           </form>
+          <div className="Title-desktop-random">
+            <RandomSpace />
+          </div>
         </div>
       </header>
     </div>
